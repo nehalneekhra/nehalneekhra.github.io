@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nehal Neekhra | Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F6F8;--card:#FFF;--ink:#12263A;--mute:#52667A;--line:#D3DEE6;--accent:#0B6E78;--tag:#F2B632;--tagink:#2E2200;--code:#0F1E2B;--k:#7DD3FC;--s:#FCD34D;--c:#6B8295;--n:#86EFAC;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1620;--card:#13222D;--ink:#E8F0F5;--mute:#9DB1C1;--line:#25384A;--accent:#4FD1C5;--code:#07111A}}
+:root[data-theme="dark"]{--bg:#0B1620;--card:#13222D;--ink:#E8F0F5;--mute:#9DB1C1;--line:#25384A;--accent:#4FD1C5;--code:#07111A}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.08;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;background:var(--tag);transform:scaleX(0);transform-origin:left;z-index:9}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:14px;flex-wrap:wrap}
+nav b{font:800 20px "Bricolage Grotesque",sans-serif}
+nav div{display:flex;gap:20px;align-items:center}
+nav a{color:var(--mute);text-decoration:none;font-weight:500}nav a:hover{color:var(--ink)}
+#theme{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 14px;font:500 14px "Instrument Sans",sans-serif;cursor:pointer}
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(460px circle at var(--mx,72%) var(--my,35%),rgba(79,209,197,.2),transparent 65%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding-top:36px;padding-bottom:84px}
+.hero h1{font-size:clamp(46px,7.2vw,88px);font-weight:800;letter-spacing:-.035em}
+.hero p{max-width:50ch;color:var(--mute);font-size:19px;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font:600 16px "Instrument Sans",sans-serif;text-decoration:none;border:2px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn.sm{padding:6px 14px;font-size:14px;border-width:1.5px}
+.btn:hover{transform:translateY(-2px)}
+.win{background:var(--code);border-radius:14px;box-shadow:0 24px 50px rgba(8,20,32,.35);overflow:hidden;font:400 14.5px/1.75 "JetBrains Mono",ui-monospace,monospace;color:#D6E4EE}
+.win header{display:flex;gap:7px;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08);color:var(--c);font-size:13px}
+.win header i{width:11px;height:11px;border-radius:50%;background:#FF6B6B}.win header i:nth-child(2){background:#FCD34D}.win header i:nth-child(3){background:#4ADE80}.win header span{margin-left:10px}
+.code{padding:16px 20px;margin:0;overflow-x:auto;white-space:pre}
+.ln{opacity:0;transform:translateX(-8px);transition:opacity .35s,transform .35s;min-height:1.75em}.ln.on{opacity:1;transform:none}
+.k{color:var(--k)}.s{color:var(--s)}.c{color:var(--c)}.n{color:var(--n)}
+.caret{display:inline-block;width:8px;height:1.1em;background:var(--tag);vertical-align:text-bottom;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+section{padding:60px 0;border-top:1px solid var(--line)}
+h2.t{font-size:clamp(30px,4vw,44px);letter-spacing:-.02em;margin-bottom:30px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;grid-template-columns:1fr 1.1fr;gap:32px;margin-bottom:24px}
+.proj h3{font-size:28px;margin-bottom:4px}
+.stack{color:var(--accent);font-weight:600;font-size:15px;margin:0 0 12px}
+.proj ul{padding-left:20px;margin:0 0 18px}.proj li{margin-bottom:6px}
+.demo{border:2px dashed var(--line);border-radius:12px;padding:18px;background:var(--bg)}
+.demo h4{margin:0 0 12px;font:600 14px "Instrument Sans",sans-serif;color:var(--mute)}
+.demo input,.demo select{font:400 16px "Instrument Sans",sans-serif;padding:9px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 13px;font:500 14px "Instrument Sans",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+#items{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.item{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--tag);border-radius:10px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:space-between;align-items:center}
+.meta{font-size:13.5px;color:var(--mute)}
+.pill{font-size:13px;font-weight:600;color:var(--accent)}
+.verify{flex-basis:100%;display:grid;gap:6px}.verify label{font-size:13.5px;color:var(--mute)}.verify div{display:flex;gap:8px}.verify input{flex:1}
+.empty{color:var(--mute);padding:8px}
+.conv{display:grid;grid-template-columns:1fr 1fr;gap:10px}.conv input{grid-column:1/-1}
+#out{margin-top:14px;font:800 30px "Bricolage Grotesque",sans-serif}
+.note{font-size:12.5px;color:var(--mute);margin:8px 0 0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
+.skills h3{font-size:19px;margin-bottom:10px}
+.skills .chips{margin:0}.skills .chip{cursor:default}.skills .chip:hover{background:var(--tag);color:var(--tagink);border-color:var(--tag)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.two h3{font-size:22px;margin-bottom:10px}.two p,.two li{margin:0 0 10px}.two ul{padding-left:20px;margin:0}.muted{color:var(--mute)}
+.band{background:var(--tag);color:var(--tagink);border:0;position:relative;padding:76px 0 60px}
+.band::before{content:"";position:absolute;top:22px;left:50%;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:var(--bg);box-shadow:inset 0 2px 5px rgba(0,0,0,.3)}
+.band h2{font-size:clamp(36px,6vw,68px);letter-spacing:-.03em;font-weight:800}
+.band p{max-width:48ch;margin:14px 0 26px;font-size:18px}
+.band .btn{border-color:var(--tagink);color:var(--tagink)}.band .btn.main{background:var(--tagink);color:var(--tag)}
+footer{padding:24px 0 36px;color:var(--mute);font-size:15px}
+@media (max-width:820px){.hero .wrap,.proj{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}.caret{animation:none}.ln{transition:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="wrap">
+<nav><b>nehal.dev</b>
+<div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">Education</a><a href="#contact">Contact</a><button id="theme" type="button">Light / Dark</button></div></nav>
+</div>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>Nehal Neekhra</h1>
+<p>Third-year B.Tech CSE student who builds full-stack web apps with React, JavaScript and MySQL, and turns everyday campus problems into working products.</p>
+<div class="btns"><a class="btn main" href="#projects">Try my projects</a><a class="btn" href="https://github.com/nehalneekhra">GitHub</a></div>
+</div>
+<div class="win" aria-label="Code introduction">
+<header><i></i><i></i><i></i><span>nehal.js</span></header>
+<pre class="code"><div class="ln"><span class="k">const</span> nehal = {</div><div class="ln">  role: <span class="s">"Full-Stack Developer"</span>,</div><div class="ln">  studying: <span class="s">"B.Tech CSE, Medicaps '28"</span>,</div><div class="ln">  stack: [<span class="s">"React"</span>, <span class="s">"JavaScript"</span>, <span class="s">"MySQL"</span>],</div><div class="ln">  builds: <span class="s">"tools people actually use"</span>,</div><div class="ln">  openToWork: <span class="n">true</span>,</div><div class="ln">};</div><div class="ln"><span class="c">// scroll down, the demos are live</span><span class="caret"></span></div></pre>
+</div>
+</div></header>
+
+<section id="projects"><div class="wrap">
+<h2 class="t">Projects you can actually try</h2>
+
+<article class="proj">
+<div>
+<h3>FindIt</h3>
+<p class="stack">React, JavaScript, MySQL</p>
+<p>A campus Lost &amp; Found platform. Lost items usually spread through WhatsApp groups and word of mouth, so FindIt keeps it all in one place.</p>
+<ul><li>Secure login, with item reports and photos.</li><li>Search and filter by category, date and location.</li><li>Owners claim an item, then it is verified before return.</li></ul>
+<a class="btn" href="https://github.com/nehalneekhra/FindIt">View code on GitHub</a>
+</div>
+<div class="demo">
+<h4>Mini demo: find your item and claim it</h4>
+<input id="q" type="search" placeholder="Search found items" aria-label="Search found items" style="width:100%">
+<div class="chips" id="cats"></div>
+<ul id="items"></ul>
+</div>
+</article>
+
+<article class="proj">
+<div>
+<h3>Currency Converter</h3>
+<p class="stack">HTML, CSS, JavaScript</p>
+<p>A responsive converter that fetches real-time exchange rates from a public API.</p>
+<ul><li>Works on mobile and desktop.</li><li>Input validation blocks wrong or empty entries.</li></ul>
+<a class="btn" href="https://github.com/nehalneekhra/Currency-Converter">View code on GitHub</a>
+</div>
+<div class="demo">
+<h4>Mini demo: convert an amount</h4>
+<div class="conv">
+<input id="amt" type="number" min="0" value="100" aria-label="Amount">
+<select id="from" aria-label="From currency"></select><select id="to" aria-label="To currency"></select>
+</div>
+<div class="btns" style="margin-top:10px"><button class="btn sm" id="swap" type="button">Swap</button></div>
+<div id="out" aria-live="polite"></div>
+<p class="note">Demo uses fixed sample rates. The real project uses live rates.</p>
+</div>
+</article>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2 class="t">Skills</h2>
+<div class="skills">
+<div><h3>Languages</h3><div class="chips"><span class="chip">C</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div></div>
+<div><h3>Web</h3><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React</span></div></div>
+<div><h3>Database</h3><div class="chips"><span class="chip">MySQL</span></div></div>
+<div><h3>Tools</h3><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">PowerShell</span></div></div>
+<div><h3>People skills</h3><div class="chips"><span class="chip">Communication</span><span class="chip">Leadership</span><span class="chip">Teamwork</span><span class="chip">Problem solving</span></div></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2 class="t">Education and more</h2>
+<div class="two">
+<div><h3>Education</h3><p><b>B.Tech in Computer Science &amp; Engineering (Core)</b><br><span class="muted">Medicaps University, Indore. Expected 2028.</span></p>
+<h3 style="margin-top:22px">Leadership</h3><p>Led a team of 8 to organize a college fest workshop that drew 70+ participants.</p></div>
+<div><h3>Certifications</h3><ul><li><b>Data Analytics Job Simulation</b>, Deloitte (Forage)</li><li><b>Certificate of Appreciation</b>, DevTown, in association with MSME and Startup India</li></ul></div>
+</div>
+</div></section>
+
+<section id="contact" class="band"><div class="wrap">
+<h2>If found, please hire.</h2>
+<p>I am looking for a software development internship in Indore or remote. If you have a role or a project, write to me.</p>
+<div class="btns"><a class="btn main" href="mailto:nehalneekhra13@gmail.com">nehalneekhra13@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/nehal-neekhra">LinkedIn</a><a class="btn" href="https://github.com/nehalneekhra">GitHub</a></div>
+</div></section>
+<footer><div class="wrap">Nehal Neekhra, Indore, India. 7067399462</div></footer>
+
+<script>
+const $=s=>document.querySelector(s),root=document.documentElement,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('#theme').onclick=()=>{const d=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;root.dataset.theme=d?'light':'dark'};
+addEventListener('scroll',()=>{const h=root.scrollHeight-innerHeight;$('#bar').style.transform='scaleX('+(h>0?scrollY/h:0)+')'},{passive:true});
+const hero=$('.hero');if(!reduce)hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--mx',e.clientX-r.left+'px');hero.style.setProperty('--my',e.clientY-r.top+'px')});
+document.querySelectorAll('.ln').forEach((l,i)=>reduce?l.classList.add('on'):setTimeout(()=>l.classList.add('on'),350+i*260));
+
+const items=[
+{id:1,name:'Blue steel water bottle',cat:'Other',loc:'Library, 2nd floor',when:'Today'},
+{id:2,name:'Casio scientific calculator',cat:'Electronics',loc:'Block B, Room 204',when:'Yesterday'},
+{id:3,name:'Student ID card',cat:'ID',loc:'Canteen',when:'2 days ago'},
+{id:4,name:'Black earbuds case',cat:'Electronics',loc:'Near gate 2',when:'Today'},
+{id:5,name:'Maroon notebook',cat:'Books',loc:'Seminar hall',when:'3 days ago'}];
+let q='',cat='All',open=null;const done={},list=$('#items');
+function chips(){$('#cats').innerHTML=['All','Electronics','ID','Books','Other'].map(c=>`<button type="button" class="chip" data-cat="${c}" aria-pressed="${c===cat}">${c}</button>`).join('')}
+function render(){
+const r=items.filter(i=>(cat==='All'||i.cat===cat)&&i.name.toLowerCase().includes(q));
+list.innerHTML=r.length?r.map(i=>`<li class="item"><div><b>${i.name}</b><div class="meta">Found at ${i.loc}, ${i.when}</div></div>${done[i.id]?'<span class="pill">Claim sent for verification</span>':'<button type="button" class="btn sm" data-claim="'+i.id+'">This is mine</button>'}${open===i.id?'<form class="verify" data-id="'+i.id+'"><label for="d'+i.id+'">Describe one detail only the owner would know</label><div><input id="d'+i.id+'" required minlength="3" placeholder="e.g. a sticker on the back"><button class="btn sm main">Send claim</button></div></form>':''}</li>`).join(''):'<li class="empty">No items match. Try another word or category.</li>';
+const f=list.querySelector('.verify input');if(f)f.focus()}
+$('#q').oninput=e=>{q=e.target.value.toLowerCase().trim();render()};
+$('#cats').onclick=e=>{const b=e.target.closest('[data-cat]');if(b){cat=b.dataset.cat;chips();render()}};
+list.onclick=e=>{const b=e.target.closest('[data-claim]');if(b){open=+b.dataset.claim;render()}};
+list.onsubmit=e=>{e.preventDefault();done[+e.target.dataset.id]=1;open=null;render()};
+chips();render();
+
+const R={USD:1,INR:83.2,EUR:.92,GBP:.79,JPY:150.5},opts=Object.keys(R).map(c=>`<option>${c}</option>`).join('');
+$('#from').innerHTML=opts;$('#to').innerHTML=opts;$('#from').value='USD';$('#to').value='INR';
+function conv(){const a=parseFloat($('#amt').value),o=$('#out');
+if(!(a>=0)){o.textContent='Enter a valid amount';return}
+o.textContent=(a/R[$('#from').value]*R[$('#to').value]).toLocaleString(undefined,{maximumFractionDigits:2})+' '+$('#to').value}
+['#amt','#from','#to'].forEach(s=>$(s).addEventListener('input',conv));
+$('#swap').onclick=()=>{const f=$('#from').value;$('#from').value=$('#to').value;$('#to').value=f;conv()};
+conv();
+</script>
+</body>
+</html>
